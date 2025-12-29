@@ -1,0 +1,14 @@
+/* Basic CSS for app (Tailwind removed) */
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin: 0;
+}
+
+nav a {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+input {
+    box-sizing: border-box;
+}
