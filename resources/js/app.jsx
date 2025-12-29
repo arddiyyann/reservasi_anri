@@ -1,6 +1,5 @@
-import "./react/styles.css";
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./react/App";
+import LoginPage from "./pages/LoginPage";
 
-createRoot(document.getElementById("app")).render(<App />);
+createRoot(document.getElementById("app")).render(<LoginPage />);

@@ -5,13 +5,13 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class AdminOnly
+class StaffOrAdmin
 {
     public function handle(Request $request, Closure $next)
     {
         $user = $request->user();
 
-        if (! $user || $user->role !== 'admin') {
+        if (! $user || ! in_array($user->role, ['staff', 'admin'], true)) {
             return response()->json(['message' => 'Forbidden'], 403);
         }
 
